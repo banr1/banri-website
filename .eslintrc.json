@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "ignorePatterns": ["node_modules/", "dist/", "**/*.js"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }
